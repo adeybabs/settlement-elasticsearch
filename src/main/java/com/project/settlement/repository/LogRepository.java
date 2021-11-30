@@ -14,7 +14,7 @@ public interface LogRepository extends ElasticsearchRepository<ProcessingLog, St
 
 
 
-  /*  List<LogRepository> findByBrandAndColor(String brand, String color);
-   Page<ProcessingLog> findByFileNameAndAffiliateCode(String fileName, boolean failed, String message, Pageable pageable);*/
+//   List<LogRepository> findByBrandAndColor(String brand, String color);
+//   Page<ProcessingLog> findByFileNameAndAffiliateCode(String fileName, boolean failed, String message, Pageable pageable);
 
 }
