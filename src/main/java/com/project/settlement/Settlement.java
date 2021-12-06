@@ -6,10 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.filter.ShallowEtagHeaderFilter;
+
+import javax.servlet.Filter;
 
 
 @SpringBootApplication
 public class Settlement implements CommandLineRunner {
+
+    @Bean
+    public Filter shallowEtagFilter(){
+        return new ShallowEtagHeaderFilter();
+    }
+
     @Autowired
     private LogService logService;
 
